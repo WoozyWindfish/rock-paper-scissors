@@ -5,5 +5,16 @@ function getRandomInt(min, max) {
   return Math.floor(Math.random() * (maxFloored - minCeiled) + minCeiled);
 }
 
-getRandomInt(0, 3)
+function getComputerChoice() {
+  let randomNumber = getRandomInt(0, 3);
 
+  if (randomNumber === 0) {
+    return 'Rock';
+  } else if (randomNumber === 1) {
+    return 'Paper';
+  } else if (randomNumber === 2) {
+    return 'Scissors';
+  }
+}
+
+console.log(getComputerChoice()); 
