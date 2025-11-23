@@ -57,6 +57,21 @@ const computerSelection = getComputerChoice();
 console.log(playRound(humanSelection, computerSelection));
 
 function playGame() {
-  playRound(humanSelection, computerSelection);
+  console.log(playRound(getHumanChoice(), getComputerChoice()));
+  console.log(playRound(getHumanChoice(), getComputerChoice()));
+  console.log(playRound(getHumanChoice(), getComputerChoice()));
+  console.log(playRound(getHumanChoice(), getComputerChoice()));
+  console.log(playRound(getHumanChoice(), getComputerChoice()));
 
+  console.log(`Final score: Human ${humanScore} Computer ${computerScore}`);
+
+  if (humanScore > computerScore) {
+    console.log("You won!");
+  } else if (humanScore < computerScore) {
+    console.log("You lost!");
+  } else {
+    console.log("The game is a tie!");
+  }
 }
+
+playGame();
